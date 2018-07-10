@@ -1,44 +1,294 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical">
 
-    <Button
-        android:id="@+id/start"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="START"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:stateListAnimator="@null"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:weightSum="2">
+                <Button
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:id="@+id/prog_start1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NORMAL"
+                    android:layout_weight="1"/>
 
-    <Button
-        android:id="@+id/end"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/start"
-        android:layout_centerHorizontal="true"
-        android:text="END"
-        android:stateListAnimator="@null"/>
+                <Button
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:id="@+id/prog_end1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="END"
+                    android:layout_weight="1"/>
+            </LinearLayout>
 
-    <FrameLayout
-        android:orientation="vertical"
-        android:id="@+id/ProgressBarWrapper01"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:layout_centerInParent="true"
-        android:visibility="gone">
+            <FrameLayout
+                android:orientation="vertical"
+                android:id="@+id/ProgressBarWrapper01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                android:layout_gravity="center|center_horizontal|center_vertical">
 
-        <ProgressBar
-            android:id="@+id/prog"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:indeterminate="true" />
-    </FrameLayout>
+                <ProgressBar
+                    android:id="@+id/prog1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:indeterminate="true" />
+            </FrameLayout>
 
-</RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:weightSum="2">
+                <Button
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:id="@+id/prog_start2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ProgressDlg with Asyntask"
+                    android:layout_weight="1"/>
+
+                <Button
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:id="@+id/prog_end2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="END"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:weightSum="2">
+                <Button
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:id="@+id/prog_start3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Full Screen"
+                    android:layout_weight="1"/>
+
+                <Button
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:id="@+id/prog_end3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="END"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:weightSum="2">
+                <Button
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:id="@+id/prog_start4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fragment ProgressBar"
+                    android:layout_weight="1"/>
+
+                <Button
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:id="@+id/prog_end4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="END"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:weightSum="2">
+                <Button
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:id="@+id/prog_start5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="IOS ProgressBar"
+                    android:layout_weight="1"/>
+
+                <Button
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:id="@+id/prog_end5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="END"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:weightSum="2">
+                <Button
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:id="@+id/prog_start6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NORMAL IOS ProgressBar"
+                    android:layout_weight="1"/>
+
+                <Button
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:id="@+id/prog_end6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="END"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:weightSum="2">
+                <Button
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:id="@+id/prog_start7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NORMAL IOS 2 ProgressBar"
+                    android:layout_weight="1"/>
+
+                <Button
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:id="@+id/prog_end7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="END"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Full Package"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"/>
+
+                <Button
+                    android:id="@+id/indeterminate"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="Indeterminate"/>
+
+                <Button
+                    android:id="@+id/label_indeterminate"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="With label and cancellable"/>
+
+                <Button
+                    android:id="@+id/detail_indeterminate"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="With details"/>
+
+                <Button
+                    android:id="@+id/grace_indeterminate"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="With grace time"/>
+
+                <Button
+                    android:id="@+id/determinate"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="Determinate"/>
+
+                <Button
+                    android:id="@+id/annular_determinate"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="Annular determinate"/>
+
+                <Button
+                    android:id="@+id/bar_determinate"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="Bar determinate"/>
+
+                <Button
+                    android:id="@+id/custom_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="Custom view"/>
+
+                <Button
+                    android:id="@+id/dim_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="Dim background"/>
+
+                <Button
+                    android:id="@+id/custom_color_animate"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="Custom color and speed"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
